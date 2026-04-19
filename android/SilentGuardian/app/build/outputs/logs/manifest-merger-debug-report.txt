@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.work.impl.WorkManagerInitializer
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:34:9-38:35
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:40:9-44:35
 	tools:node
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:38:13-32
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:44:13-32
 	android:authorities
 		INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:36:13-68
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:42:13-68
 	android:exported
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:13-37
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:35:13-69
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:41:13-69
 manifest
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-68:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\arnav\.gradle\caches\transforms-3\3da494627677b7c8bb4bce3ad0a652df\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
@@ -22,6 +22,10 @@ MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\arnav\.gradle\caches\t
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\arnav\.gradle\caches\transforms-3\7243baa9444add88136e5de6eeb9137c\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arnav\.gradle\caches\transforms-3\90298f9c2d37f2a1f20f1b1ff64559a3\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\arnav\.gradle\caches\transforms-3\3a9d2ff30e3ee59a491fd0d6857e03f9\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\arnav\.gradle\caches\transforms-3\db32b47d974c9762e7bf92f8b36af90d\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\arnav\.gradle\caches\transforms-3\94d7f58793b9b8ac303b66c891734eec\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.8.0] C:\Users\arnav\.gradle\caches\transforms-3\5bb637fc5501f288752634cdfe10f43b\transformed\jetified-activity-1.8.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\arnav\.gradle\caches\transforms-3\fe5a41ba17fcb2613f1f28d8a205fe7c\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
@@ -83,31 +87,47 @@ ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\Silen
 		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:8:9-44
 	android:name
 		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:7:22-75
+uses-permission#android.permission.READ_CALL_LOG
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:11:5-72
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:11:22-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:14:22-78
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:11:5-81
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:17:5-81
 MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:25:5-81
 MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:25:5-81
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:11:22-78
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:17:22-78
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:12:5-77
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:18:5-77
 MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:26:5-77
 MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:26:5-77
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:12:22-74
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:18:22-74
 uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:13:5-77
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:19:5-77
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:13:22-74
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:19:22-74
 application
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:5-49:19
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:5-49:19
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:5-66:19
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:5-66:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\arnav\.gradle\caches\transforms-3\3a9d2ff30e3ee59a491fd0d6857e03f9\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\arnav\.gradle\caches\transforms-3\3a9d2ff30e3ee59a491fd0d6857e03f9\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\arnav\.gradle\caches\transforms-3\db32b47d974c9762e7bf92f8b36af90d\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\arnav\.gradle\caches\transforms-3\db32b47d974c9762e7bf92f8b36af90d\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:28:5-143:19
 MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:28:5-143:19
 MERGED from [androidx.core:core:1.12.0] C:\Users\arnav\.gradle\caches\transforms-3\0dac3c737471167fe818b9497136c77e\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
@@ -127,45 +147,61 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\arnav\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\arnav\.gradle\caches\transforms-3\0dac3c737471167fe818b9497136c77e\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:26:9-35
 	android:label
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:18:9-39
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:24:9-39
 	android:roundIcon
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:19:9-54
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:25:9-54
 	android:icon
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:17:9-43
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:23:9-43
 	android:allowBackup
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:22:9-35
 	android:theme
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:9-52
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:27:9-52
 activity#com.silentguardian.MainActivity
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:24:9-31:20
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:30:9-37:20
 	android:exported
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:26:13-36
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:25:13-41
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:31:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:27:13-30:29
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:33:13-36:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:35:27-74
 receiver#com.silentguardian.BootReceiver
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:41:9-47:20
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:47:9-53:20
 	android:exported
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:43:13-36
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:42:13-41
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:48:13-41
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:44:13-46:29
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:50:13-52:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:45:17-79
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:51:17-79
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:45:25-76
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:51:25-76
+service#com.silentguardian.WhatsappNotificationListener
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:56:9-64:19
+	android:label
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:58:13-65
+	android:exported
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:60:13-36
+	android:permission
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:59:13-87
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:57:13-57
+intent-filter#action:name:android.service.notification.NotificationListenerService
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:61:13-63:29
+action#android.service.notification.NotificationListenerService
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:62:17-99
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:62:25-96
 uses-sdk
 INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml
@@ -184,6 +220,14 @@ MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transfo
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arnav\.gradle\caches\transforms-3\90298f9c2d37f2a1f20f1b1ff64559a3\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arnav\.gradle\caches\transforms-3\90298f9c2d37f2a1f20f1b1ff64559a3\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\arnav\.gradle\caches\transforms-3\3a9d2ff30e3ee59a491fd0d6857e03f9\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.1.0] C:\Users\arnav\.gradle\caches\transforms-3\3a9d2ff30e3ee59a491fd0d6857e03f9\transformed\jetified-play-services-location-21.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\arnav\.gradle\caches\transforms-3\db32b47d974c9762e7bf92f8b36af90d\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\arnav\.gradle\caches\transforms-3\db32b47d974c9762e7bf92f8b36af90d\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\arnav\.gradle\caches\transforms-3\94d7f58793b9b8ac303b66c891734eec\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\arnav\.gradle\caches\transforms-3\94d7f58793b9b8ac303b66c891734eec\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.8.0] C:\Users\arnav\.gradle\caches\transforms-3\5bb637fc5501f288752634cdfe10f43b\transformed\jetified-activity-1.8.0\AndroidManifest.xml:20:5-44
@@ -300,6 +344,20 @@ ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transfor
 		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 	android:name
 		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:23:5-68
 	android:name

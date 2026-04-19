@@ -2,43 +2,45 @@ com.silentguardian.app-work-runtime-2.9.0-0 C:\Users\arnav\.gradle\caches\transf
 com.silentguardian.app-core-1.12.0-1 C:\Users\arnav\.gradle\caches\transforms-3\0dac3c737471167fe818b9497136c77e\transformed\core-1.12.0\res
 com.silentguardian.app-jetified-lifecycle-livedata-core-ktx-2.7.0-2 C:\Users\arnav\.gradle\caches\transforms-3\128ee566f79e760e9f99441fff4189e2\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
 com.silentguardian.app-room-runtime-2.5.0-3 C:\Users\arnav\.gradle\caches\transforms-3\1703e792174aa3e868a22c763eea13fa\transformed\room-runtime-2.5.0\res
-com.silentguardian.app-lifecycle-viewmodel-2.7.0-4 C:\Users\arnav\.gradle\caches\transforms-3\2893553a26c56624af19c837bdd312fc\transformed\lifecycle-viewmodel-2.7.0\res
-com.silentguardian.app-sqlite-2.3.0-5 C:\Users\arnav\.gradle\caches\transforms-3\29e00ea6e83870b46f1634478a53f615\transformed\sqlite-2.3.0\res
-com.silentguardian.app-coordinatorlayout-1.1.0-6 C:\Users\arnav\.gradle\caches\transforms-3\2f3bec39bfe2c94d0466c91f75b537f5\transformed\coordinatorlayout-1.1.0\res
-com.silentguardian.app-jetified-lifecycle-runtime-ktx-2.7.0-7 C:\Users\arnav\.gradle\caches\transforms-3\3a2a96d7c1e35a6014d264ed2c52438b\transformed\jetified-lifecycle-runtime-ktx-2.7.0\res
-com.silentguardian.app-jetified-appcompat-resources-1.6.1-8 C:\Users\arnav\.gradle\caches\transforms-3\3da494627677b7c8bb4bce3ad0a652df\transformed\jetified-appcompat-resources-1.6.1\res
-com.silentguardian.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-9 C:\Users\arnav\.gradle\caches\transforms-3\3def914c6cd57e5430d08e8451b827db\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
-com.silentguardian.app-cardview-1.0.0-10 C:\Users\arnav\.gradle\caches\transforms-3\4244552cd9b05e3e3dfc3ab5cbe77b3d\transformed\cardview-1.0.0\res
-com.silentguardian.app-sqlite-framework-2.3.0-11 C:\Users\arnav\.gradle\caches\transforms-3\44b24d8bdaedd19f7ae626b80ed91264\transformed\sqlite-framework-2.3.0\res
-com.silentguardian.app-material-1.11.0-12 C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\res
-com.silentguardian.app-transition-1.2.0-13 C:\Users\arnav\.gradle\caches\transforms-3\5b703960841867567815f69f6fbf5e0a\transformed\transition-1.2.0\res
-com.silentguardian.app-jetified-activity-1.8.0-14 C:\Users\arnav\.gradle\caches\transforms-3\5bb637fc5501f288752634cdfe10f43b\transformed\jetified-activity-1.8.0\res
-com.silentguardian.app-jetified-annotation-experimental-1.3.0-15 C:\Users\arnav\.gradle\caches\transforms-3\62b85f0416f7f510c6b0e68e48ce38ae\transformed\jetified-annotation-experimental-1.3.0\res
-com.silentguardian.app-jetified-emoji2-1.2.0-16 C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\res
-com.silentguardian.app-work-runtime-ktx-2.9.0-17 C:\Users\arnav\.gradle\caches\transforms-3\6d6ba5faf7b62fb8c9f2303cf97503db\transformed\work-runtime-ktx-2.9.0\res
-com.silentguardian.app-jetified-emoji2-views-helper-1.2.0-18 C:\Users\arnav\.gradle\caches\transforms-3\7243baa9444add88136e5de6eeb9137c\transformed\jetified-emoji2-views-helper-1.2.0\res
-com.silentguardian.app-jetified-core-ktx-1.12.0-19 C:\Users\arnav\.gradle\caches\transforms-3\74d1b63a596d6f457913b4ff15da255f\transformed\jetified-core-ktx-1.12.0\res
-com.silentguardian.app-lifecycle-livedata-core-2.7.0-20 C:\Users\arnav\.gradle\caches\transforms-3\865fbc6cc2040233af4c0eb67073d143\transformed\lifecycle-livedata-core-2.7.0\res
-com.silentguardian.app-appcompat-1.6.1-21 C:\Users\arnav\.gradle\caches\transforms-3\8a9e4451239df27d10915c1819bd85b2\transformed\appcompat-1.6.1\res
-com.silentguardian.app-jetified-viewpager2-1.0.0-22 C:\Users\arnav\.gradle\caches\transforms-3\90298f9c2d37f2a1f20f1b1ff64559a3\transformed\jetified-viewpager2-1.0.0\res
-com.silentguardian.app-fragment-1.3.6-23 C:\Users\arnav\.gradle\caches\transforms-3\94d7f58793b9b8ac303b66c891734eec\transformed\fragment-1.3.6\res
-com.silentguardian.app-jetified-lifecycle-process-2.7.0-24 C:\Users\arnav\.gradle\caches\transforms-3\979967de2381b4275f4436525c320693\transformed\jetified-lifecycle-process-2.7.0\res
-com.silentguardian.app-jetified-room-ktx-2.5.0-25 C:\Users\arnav\.gradle\caches\transforms-3\b07eea80de99d8065689687ae34c3eea\transformed\jetified-room-ktx-2.5.0\res
-com.silentguardian.app-jetified-startup-runtime-1.1.1-26 C:\Users\arnav\.gradle\caches\transforms-3\b39de16ae36520575b8a00a3ffc6d243\transformed\jetified-startup-runtime-1.1.1\res
-com.silentguardian.app-jetified-savedstate-1.2.1-27 C:\Users\arnav\.gradle\caches\transforms-3\b47eb971b322d685634feac314d526f4\transformed\jetified-savedstate-1.2.1\res
-com.silentguardian.app-recyclerview-1.1.0-28 C:\Users\arnav\.gradle\caches\transforms-3\bd1b6d73b33cec21d0407e9621d5a8b6\transformed\recyclerview-1.1.0\res
-com.silentguardian.app-jetified-profileinstaller-1.3.0-29 C:\Users\arnav\.gradle\caches\transforms-3\c18bbf7daec95ce86ac648f59a8c0911\transformed\jetified-profileinstaller-1.3.0\res
-com.silentguardian.app-jetified-lifecycle-service-2.7.0-30 C:\Users\arnav\.gradle\caches\transforms-3\cfabc00e6cd5b621d1dea2e31f0282ae\transformed\jetified-lifecycle-service-2.7.0\res
-com.silentguardian.app-core-runtime-2.2.0-31 C:\Users\arnav\.gradle\caches\transforms-3\df912d52311f2e8d1a5e555a44a195d2\transformed\core-runtime-2.2.0\res
-com.silentguardian.app-lifecycle-runtime-2.7.0-32 C:\Users\arnav\.gradle\caches\transforms-3\dfd0340e145aa9c7947293efa55b8f9d\transformed\lifecycle-runtime-2.7.0\res
-com.silentguardian.app-lifecycle-livedata-2.7.0-33 C:\Users\arnav\.gradle\caches\transforms-3\e05e51bb5275eab35340ad214ab36cc3\transformed\lifecycle-livedata-2.7.0\res
-com.silentguardian.app-constraintlayout-2.0.1-34 C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\res
-com.silentguardian.app-drawerlayout-1.1.1-35 C:\Users\arnav\.gradle\caches\transforms-3\fe5a41ba17fcb2613f1f28d8a205fe7c\transformed\drawerlayout-1.1.1\res
-com.silentguardian.app-jetified-lifecycle-livedata-ktx-2.7.0-36 C:\Users\arnav\.gradle\caches\transforms-3\ffbdaf78ec2b7fa94e15d0138bf70707\transformed\jetified-lifecycle-livedata-ktx-2.7.0\res
-com.silentguardian.app-pngs-37 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\generated\res\pngs\debug
-com.silentguardian.app-resValues-38 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\generated\res\resValues\debug
-com.silentguardian.app-packageDebugResources-39 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.silentguardian.app-packageDebugResources-40 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.silentguardian.app-merged_res-41 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\intermediates\merged_res\debug
-com.silentguardian.app-debug-42 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\debug\res
-com.silentguardian.app-main-43 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\res
+com.silentguardian.app-jetified-play-services-base-18.1.0-4 C:\Users\arnav\.gradle\caches\transforms-3\1906eeeb4d34e31f3c6894fe78bf8228\transformed\jetified-play-services-base-18.1.0\res
+com.silentguardian.app-lifecycle-viewmodel-2.7.0-5 C:\Users\arnav\.gradle\caches\transforms-3\2893553a26c56624af19c837bdd312fc\transformed\lifecycle-viewmodel-2.7.0\res
+com.silentguardian.app-sqlite-2.3.0-6 C:\Users\arnav\.gradle\caches\transforms-3\29e00ea6e83870b46f1634478a53f615\transformed\sqlite-2.3.0\res
+com.silentguardian.app-coordinatorlayout-1.1.0-7 C:\Users\arnav\.gradle\caches\transforms-3\2f3bec39bfe2c94d0466c91f75b537f5\transformed\coordinatorlayout-1.1.0\res
+com.silentguardian.app-jetified-lifecycle-runtime-ktx-2.7.0-8 C:\Users\arnav\.gradle\caches\transforms-3\3a2a96d7c1e35a6014d264ed2c52438b\transformed\jetified-lifecycle-runtime-ktx-2.7.0\res
+com.silentguardian.app-jetified-appcompat-resources-1.6.1-9 C:\Users\arnav\.gradle\caches\transforms-3\3da494627677b7c8bb4bce3ad0a652df\transformed\jetified-appcompat-resources-1.6.1\res
+com.silentguardian.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-10 C:\Users\arnav\.gradle\caches\transforms-3\3def914c6cd57e5430d08e8451b827db\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.silentguardian.app-cardview-1.0.0-11 C:\Users\arnav\.gradle\caches\transforms-3\4244552cd9b05e3e3dfc3ab5cbe77b3d\transformed\cardview-1.0.0\res
+com.silentguardian.app-sqlite-framework-2.3.0-12 C:\Users\arnav\.gradle\caches\transforms-3\44b24d8bdaedd19f7ae626b80ed91264\transformed\sqlite-framework-2.3.0\res
+com.silentguardian.app-material-1.11.0-13 C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\res
+com.silentguardian.app-transition-1.2.0-14 C:\Users\arnav\.gradle\caches\transforms-3\5b703960841867567815f69f6fbf5e0a\transformed\transition-1.2.0\res
+com.silentguardian.app-jetified-activity-1.8.0-15 C:\Users\arnav\.gradle\caches\transforms-3\5bb637fc5501f288752634cdfe10f43b\transformed\jetified-activity-1.8.0\res
+com.silentguardian.app-jetified-annotation-experimental-1.3.0-16 C:\Users\arnav\.gradle\caches\transforms-3\62b85f0416f7f510c6b0e68e48ce38ae\transformed\jetified-annotation-experimental-1.3.0\res
+com.silentguardian.app-jetified-emoji2-1.2.0-17 C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\res
+com.silentguardian.app-work-runtime-ktx-2.9.0-18 C:\Users\arnav\.gradle\caches\transforms-3\6d6ba5faf7b62fb8c9f2303cf97503db\transformed\work-runtime-ktx-2.9.0\res
+com.silentguardian.app-jetified-emoji2-views-helper-1.2.0-19 C:\Users\arnav\.gradle\caches\transforms-3\7243baa9444add88136e5de6eeb9137c\transformed\jetified-emoji2-views-helper-1.2.0\res
+com.silentguardian.app-jetified-core-ktx-1.12.0-20 C:\Users\arnav\.gradle\caches\transforms-3\74d1b63a596d6f457913b4ff15da255f\transformed\jetified-core-ktx-1.12.0\res
+com.silentguardian.app-lifecycle-livedata-core-2.7.0-21 C:\Users\arnav\.gradle\caches\transforms-3\865fbc6cc2040233af4c0eb67073d143\transformed\lifecycle-livedata-core-2.7.0\res
+com.silentguardian.app-appcompat-1.6.1-22 C:\Users\arnav\.gradle\caches\transforms-3\8a9e4451239df27d10915c1819bd85b2\transformed\appcompat-1.6.1\res
+com.silentguardian.app-jetified-viewpager2-1.0.0-23 C:\Users\arnav\.gradle\caches\transforms-3\90298f9c2d37f2a1f20f1b1ff64559a3\transformed\jetified-viewpager2-1.0.0\res
+com.silentguardian.app-fragment-1.3.6-24 C:\Users\arnav\.gradle\caches\transforms-3\94d7f58793b9b8ac303b66c891734eec\transformed\fragment-1.3.6\res
+com.silentguardian.app-jetified-lifecycle-process-2.7.0-25 C:\Users\arnav\.gradle\caches\transforms-3\979967de2381b4275f4436525c320693\transformed\jetified-lifecycle-process-2.7.0\res
+com.silentguardian.app-jetified-play-services-basement-18.1.0-26 C:\Users\arnav\.gradle\caches\transforms-3\a724b7fe6618b7a50430f259d81e3ec1\transformed\jetified-play-services-basement-18.1.0\res
+com.silentguardian.app-jetified-room-ktx-2.5.0-27 C:\Users\arnav\.gradle\caches\transforms-3\b07eea80de99d8065689687ae34c3eea\transformed\jetified-room-ktx-2.5.0\res
+com.silentguardian.app-jetified-startup-runtime-1.1.1-28 C:\Users\arnav\.gradle\caches\transforms-3\b39de16ae36520575b8a00a3ffc6d243\transformed\jetified-startup-runtime-1.1.1\res
+com.silentguardian.app-jetified-savedstate-1.2.1-29 C:\Users\arnav\.gradle\caches\transforms-3\b47eb971b322d685634feac314d526f4\transformed\jetified-savedstate-1.2.1\res
+com.silentguardian.app-recyclerview-1.1.0-30 C:\Users\arnav\.gradle\caches\transforms-3\bd1b6d73b33cec21d0407e9621d5a8b6\transformed\recyclerview-1.1.0\res
+com.silentguardian.app-jetified-profileinstaller-1.3.0-31 C:\Users\arnav\.gradle\caches\transforms-3\c18bbf7daec95ce86ac648f59a8c0911\transformed\jetified-profileinstaller-1.3.0\res
+com.silentguardian.app-jetified-lifecycle-service-2.7.0-32 C:\Users\arnav\.gradle\caches\transforms-3\cfabc00e6cd5b621d1dea2e31f0282ae\transformed\jetified-lifecycle-service-2.7.0\res
+com.silentguardian.app-core-runtime-2.2.0-33 C:\Users\arnav\.gradle\caches\transforms-3\df912d52311f2e8d1a5e555a44a195d2\transformed\core-runtime-2.2.0\res
+com.silentguardian.app-lifecycle-runtime-2.7.0-34 C:\Users\arnav\.gradle\caches\transforms-3\dfd0340e145aa9c7947293efa55b8f9d\transformed\lifecycle-runtime-2.7.0\res
+com.silentguardian.app-lifecycle-livedata-2.7.0-35 C:\Users\arnav\.gradle\caches\transforms-3\e05e51bb5275eab35340ad214ab36cc3\transformed\lifecycle-livedata-2.7.0\res
+com.silentguardian.app-constraintlayout-2.0.1-36 C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\res
+com.silentguardian.app-drawerlayout-1.1.1-37 C:\Users\arnav\.gradle\caches\transforms-3\fe5a41ba17fcb2613f1f28d8a205fe7c\transformed\drawerlayout-1.1.1\res
+com.silentguardian.app-jetified-lifecycle-livedata-ktx-2.7.0-38 C:\Users\arnav\.gradle\caches\transforms-3\ffbdaf78ec2b7fa94e15d0138bf70707\transformed\jetified-lifecycle-livedata-ktx-2.7.0\res
+com.silentguardian.app-pngs-39 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\generated\res\pngs\debug
+com.silentguardian.app-resValues-40 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\generated\res\resValues\debug
+com.silentguardian.app-packageDebugResources-41 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.silentguardian.app-packageDebugResources-42 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.silentguardian.app-merged_res-43 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\build\intermediates\merged_res\debug
+com.silentguardian.app-debug-44 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\debug\res
+com.silentguardian.app-main-45 C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\res

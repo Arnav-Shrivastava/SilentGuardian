@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.silentguardian.app-mergeDebugResources-39:/values-v25/values-v25.xml",
+            "outputFile": "com.silentguardian.app-mergeDebugResources-41:/values-v25/values-v25.xml",
             "map": [
                 {
                     "source": "C:\\Users\\arnav\\.gradle\\caches\\transforms-3\\8a9e4451239df27d10915c1819bd85b2\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",

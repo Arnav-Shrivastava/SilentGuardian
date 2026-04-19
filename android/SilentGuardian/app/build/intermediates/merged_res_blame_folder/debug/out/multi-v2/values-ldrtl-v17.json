@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.silentguardian.app-mergeDebugResources-39:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.silentguardian.app-mergeDebugResources-41:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
                     "source": "C:\\Users\\arnav\\.gradle\\caches\\transforms-3\\4bd5e85451454609fba1ed62989d0777\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",

@@ -42,6 +42,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var runNowBtn: Button
     private lateinit var emptyText: TextView
 
+    // Permission request codes
+    private val PERMISSION_REQUEST_CODE = 100
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -97,18 +100,80 @@ class MainActivity : AppCompatActivity() {
         return mode == AppOpsManager.MODE_ALLOWED
     }
 
+    private fun hasRuntimePermissions(): Boolean {
+        val callLog = androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_CALL_LOG)
+        val location = androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+        return callLog == android.content.pm.PackageManager.PERMISSION_GRANTED &&
+               location == android.content.pm.PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun isNotificationServiceEnabled(): Boolean {
+        val pkgName = packageName
+        val flat = Settings.Secure.getString(contentResolver, "enabled_notification_listeners")
+        if (!flat.isNullOrEmpty()) {
+            val names = flat.split(":")
+            for (name in names) {
+                val cn = android.content.ComponentName.unflattenFromString(name)
+                if (cn != null && cn.packageName == pkgName) return true
+            }
+        }
+        return false
+    }
+
     private fun updatePermissionBanner() {
-        if (hasUsagePermission()) {
+        val usageOk = hasUsagePermission()
+        val runtimeOk = hasRuntimePermissions()
+        val notifyOk = isNotificationServiceEnabled()
+
+        if (usageOk && runtimeOk && notifyOk) {
             permissionBanner.setBackgroundColor(0xFF1B5E20.toInt()) // dark green
-            permissionText.text = "✅  Usage access granted — collection active"
+            permissionText.text = "✅  All permissions granted — collection active"
             permissionText.setTextColor(0xFFA5D6A7.toInt())
             grantPermissionBtn.visibility = View.GONE
         } else {
             permissionBanner.setBackgroundColor(0xFF7F0000.toInt()) // dark red
-            permissionText.text = "⚠️  Usage access NOT granted\nTap below to enable in Settings"
+            val sb = StringBuilder()
+            if (!usageOk) sb.append("⚠️  Usage access NOT granted\n")
+            if (!runtimeOk) sb.append("⚠️  Call Log/Location NOT granted\n")
+            if (!notifyOk) sb.append("⚠️  Notification access NOT granted\n")
+            sb.append("Tap below to fix")
+            permissionText.text = sb.toString()
             permissionText.setTextColor(0xFFFFCDD2.toInt())
             grantPermissionBtn.visibility = View.VISIBLE
+            
+            grantPermissionBtn.text = when {
+                !usageOk -> "Fix Usage Access"
+                !runtimeOk -> "Grant Runtime Permissions"
+                else -> "Enable Notification Access"
+            }
+            grantPermissionBtn.setOnClickListener {
+                when {
+                    !usageOk -> openUsageAccessSettings()
+                    !runtimeOk -> requestRuntimePermissions()
+                    else -> openNotificationAccessSettings()
+                }
+            }
         }
+    }
+
+    private fun openNotificationAccessSettings() {
+        startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
+    }
+
+    private fun requestRuntimePermissions() {
+        androidx.core.app.ActivityCompat.requestPermissions(
+            this,
+            arrayOf(
+                android.Manifest.permission.READ_CALL_LOG,
+                android.Manifest.permission.ACCESS_COARSE_LOCATION
+            ),
+            PERMISSION_REQUEST_CODE
+        )
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        updatePermissionBanner()
     }
 
     /**
@@ -155,8 +220,8 @@ class MainActivity : AppCompatActivity() {
      */
     private fun refreshEventList() {
         val events = db.getRecentEvents(
-            eventType = DatabaseHelper.EVENT_SCREEN_UNLOCK,
-            limit = 10
+            eventType = null, // Fetch all types
+            limit = 20
         )
 
         eventListLayout.removeAllViews()
@@ -175,9 +240,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun buildEventCard(event: EventRow): View {
-        val isUnlock = event.value == "unlock"
-        val emoji = if (isUnlock) "🔓" else "🔒"
-        val action = if (isUnlock) "Unlocked" else "Locked"
+        val emoji = when (event.eventType) {
+            DatabaseHelper.EVENT_SCREEN_UNLOCK -> if (event.value == "unlock") "🔓" else "🔒"
+            DatabaseHelper.EVENT_CALL -> "📞"
+            DatabaseHelper.EVENT_CHARGE -> "⚡"
+            DatabaseHelper.EVENT_LOCATION -> "📍"
+            DatabaseHelper.EVENT_NOTIFICATION -> "💬"
+            else -> "🔹"
+        }
+
+        val title = when (event.eventType) {
+            DatabaseHelper.EVENT_SCREEN_UNLOCK -> if (event.value == "unlock") "Screen Unlocked" else "Screen Locked"
+            DatabaseHelper.EVENT_CALL -> "Call Event"
+            DatabaseHelper.EVENT_CHARGE -> "Power State"
+            DatabaseHelper.EVENT_LOCATION -> "Location Sync"
+            DatabaseHelper.EVENT_NOTIFICATION -> "WhatsApp Activity"
+            else -> event.eventType
+        }
 
         val cardLayout = LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
@@ -202,27 +281,27 @@ class MainActivity : AppCompatActivity() {
         }
 
         val actionText = TextView(this).apply {
-            text = "$action"
+            text = title
             textSize = 14f
             setTextColor(0xFFE0E0E0.toInt())
             setTypeface(null, android.graphics.Typeface.BOLD)
         }
 
-        val timeText = TextView(this).apply {
-            text = event.timestamp
+        val detailText = TextView(this).apply {
+            text = event.value
             textSize = 12f
-            setTextColor(0xFF9E9E9E.toInt())
+            setTextColor(0xFFB0BEC5.toInt())
         }
 
-        val dayText = TextView(this).apply {
-            text = event.dayOfWeek
+        val timeText = TextView(this).apply {
+            text = "${event.timestamp} • ${event.dayOfWeek}"
             textSize = 11f
             setTextColor(0xFF7986CB.toInt()) // indigo accent
         }
 
         textLayout.addView(actionText)
+        textLayout.addView(detailText)
         textLayout.addView(timeText)
-        textLayout.addView(dayText)
 
         cardLayout.addView(emojiView)
         cardLayout.addView(textLayout)
@@ -343,7 +422,7 @@ class MainActivity : AppCompatActivity() {
 
         // ── Events list ────────────────────────────────────────────────────
         val eventsLabel = TextView(this).apply {
-            text = "LAST 10 SCREEN UNLOCK EVENTS"
+            text = "LAST 20 BEHAVIORAL SIGNALS"
             textSize = 10f
             setTextColor(0xFF9E9E9E.toInt())
             letterSpacing = 0.1f

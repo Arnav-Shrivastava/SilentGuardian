@@ -45,4 +45,7 @@ dependencies {
     // LiveData — to observe WorkManager job status in MainActivity
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+
+    // Play Services Location
+    implementation 'com.google.android.gms:play-services-location:21.1.0'
 }

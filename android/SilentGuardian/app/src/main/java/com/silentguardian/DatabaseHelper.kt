@@ -37,6 +37,8 @@ class DatabaseHelper(context: Context) :
         const val EVENT_APP_USAGE = "APP_USAGE"
         const val EVENT_CALL = "CALL"
         const val EVENT_CHARGE = "CHARGE"
+        const val EVENT_LOCATION = "LOCATION"
+        const val EVENT_NOTIFICATION = "NOTIFICATION"
     }
 
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
