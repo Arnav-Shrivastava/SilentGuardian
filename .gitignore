@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+*.pkl
+*.onnx
+
+# Android build output
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.apk
+*.aab
+
+# Data — never commit real user data
+*.db
+*.sqlite
+data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+#Docs File
+docs/silentguardian_master_roadmap.md
