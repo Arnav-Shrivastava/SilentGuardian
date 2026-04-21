@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+
+  <!-- Black background -->
+  <rect width="400" height="400" fill="#111111"/>
+
+  <!-- Shield — solid white -->
+  <path d="M200 72 L296 110 L296 200 C296 252 253 293 200 314 C147 293 104 252 104 200 L104 110 Z"
+        fill="#ffffff"/>
+
+  <!-- Heartbeat line — black cutout -->
+  <polyline
+    points="132,200 152,200 161,174 173,226 182,188 194,200 268,200"
+    fill="none"
+    stroke="#111111"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Wordmark — white -->
+  <text x="200" y="358"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="27"
+        font-weight="800"
+        letter-spacing="-1"
+        fill="#ffffff"
+        text-anchor="middle">SilentGuardian</text>
+
+</svg>
