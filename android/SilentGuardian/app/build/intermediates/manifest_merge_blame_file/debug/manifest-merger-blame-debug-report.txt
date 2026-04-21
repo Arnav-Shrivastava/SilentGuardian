@@ -22,24 +22,26 @@
 18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 18-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:14:5-81
 18-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:14:22-78
-19    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-19-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:5-75
-19-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:22-72
-20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Required for CellInfo on newer Android -->
-20-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:5-79
-20-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:22-76
-21
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:5-79
+19-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:22-76
+20    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+20-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:5-85
+20-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:22-82
+21    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+21-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:17:5-75
+21-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:17:22-72
 22
 23    <!-- Required to schedule WorkManager background jobs -->
 24    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-24-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:19:5-81
-24-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:19:22-78
+24-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:5-81
+24-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:22-78
 25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-25-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:5-77
-25-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:22-74
+25-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:5-77
+25-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:22-74
 26    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-26-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:5-77
-26-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:22-74
+26-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:22:5-77
+26-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:22:22-74
 27    <uses-permission android:name="android.permission.WAKE_LOCK" />
 27-->[androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:23:5-68
 27-->[androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:23:22-65
@@ -59,94 +61,94 @@
 34-->[androidx.core:core:1.12.0] C:\Users\arnav\.gradle\caches\transforms-3\0dac3c737471167fe818b9497136c77e\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 35
 36    <application
-36-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:23:5-78:19
+36-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:24:5-79:19
 37        android:allowBackup="true"
-37-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:24:9-35
+37-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:25:9-35
 38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 38-->[androidx.core:core:1.12.0] C:\Users\arnav\.gradle\caches\transforms-3\0dac3c737471167fe818b9497136c77e\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 39        android:debuggable="true"
 40        android:extractNativeLibs="false"
 41        android:icon="@mipmap/ic_launcher"
-41-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:25:9-43
+41-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:26:9-43
 42        android:label="SilentGuardian"
-42-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:26:9-39
+42-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:27:9-39
 43        android:roundIcon="@mipmap/ic_launcher_round"
-43-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:27:9-54
+43-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:28:9-54
 44        android:supportsRtl="true"
-44-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:28:9-35
+44-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:29:9-35
 45        android:testOnly="true"
 46        android:theme="@style/Theme.SilentGuardian" >
-46-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:29:9-52
+46-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:30:9-52
 47
 48        <!-- Main screen -->
 49        <activity
-49-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:32:9-39:20
+49-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:33:9-40:20
 50            android:name="com.silentguardian.MainActivity"
-50-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:33:13-41
+50-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:34:13-41
 51            android:exported="true" >
-51-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:34:13-36
+51-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:35:13-36
 52            <intent-filter>
-52-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:35:13-38:29
+52-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:36:13-39:29
 53                <action android:name="android.intent.action.MAIN" />
-53-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:36:17-69
-53-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:36:25-66
+53-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:17-69
+53-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:25-66
 54
 55                <category android:name="android.intent.category.LAUNCHER" />
-55-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:17-77
-55-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:27-74
+55-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:38:17-77
+55-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:38:27-74
 56            </intent-filter>
 57        </activity>
 58
 59        <!-- BroadcastReceiver to reschedule WorkManager after device reboot -->
 60        <receiver
-60-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:49:9-55:20
+60-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:50:9-56:20
 61            android:name="com.silentguardian.BootReceiver"
-61-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:50:13-41
+61-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:51:13-41
 62            android:exported="true" >
-62-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:51:13-36
+62-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:52:13-36
 63            <intent-filter>
-63-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:52:13-54:29
+63-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:53:13-55:29
 64                <action android:name="android.intent.action.BOOT_COMPLETED" />
-64-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:53:17-79
-64-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:53:25-76
+64-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:54:17-79
+64-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:54:25-76
 65            </intent-filter>
 66        </receiver>
 67
 68        <!-- Notification Listener Service -->
 69        <service
-69-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:58:9-66:19
+69-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:59:9-67:19
 70            android:name="com.silentguardian.WhatsappNotificationListener"
-70-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:59:13-57
+70-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:60:13-57
 71            android:exported="true"
-71-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:62:13-36
+71-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:63:13-36
 72            android:label="SilentGuardian Notification Listener"
-72-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:60:13-65
+72-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:61:13-65
 73            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
-73-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:61:13-87
+73-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:62:13-87
 74            <intent-filter>
-74-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:63:13-65:29
+74-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:64:13-66:29
 75                <action android:name="android.service.notification.NotificationListenerService" />
-75-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:64:17-99
-75-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:64:25-96
+75-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:65:17-99
+75-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:65:25-96
 76            </intent-filter>
 77        </service>
 78
 79        <provider
-79-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:68:9-76:20
+79-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:69:9-77:20
 80            android:name="androidx.core.content.FileProvider"
-80-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:69:13-62
+80-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:70:13-62
 81            android:authorities="com.silentguardian.fileprovider"
-81-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:70:13-66
+81-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:71:13-66
 82            android:exported="false"
-82-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:71:13-37
+82-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:72:13-37
 83            android:grantUriPermissions="true" >
-83-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:72:13-47
+83-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:73:13-47
 84            <meta-data
-84-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:73:13-75:54
+84-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:74:13-76:54
 85                android:name="android.support.FILE_PROVIDER_PATHS"
-85-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:74:17-67
+85-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:75:17-67
 86                android:resource="@xml/file_paths" />
-86-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:75:17-51
+86-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:76:17-51
 87        </provider>
 88        <provider
 88-->[androidx.emoji2:emoji2:1.2.0] C:\Users\arnav\.gradle\caches\transforms-3\684eb1adcf875dec2de3966229e8653c\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
@@ -331,8 +333,8 @@
 181            <intent-filter>
 181-->[androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:116:13-120:29
 182                <action android:name="android.intent.action.BOOT_COMPLETED" />
-182-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:53:17-79
-182-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:53:25-76
+182-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:54:17-79
+182-->C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:54:25-76
 183                <action android:name="android.intent.action.TIME_SET" />
 183-->[androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:118:17-73
 183-->[androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:118:25-70
