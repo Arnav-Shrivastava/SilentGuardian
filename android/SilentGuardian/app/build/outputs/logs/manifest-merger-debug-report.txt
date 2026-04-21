@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.work.impl.WorkManagerInitializer
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:42:9-46:35
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:43:9-47:35
 	tools:node
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:46:13-32
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:47:13-32
 	android:authorities
 		INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:44:13-68
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:45:13-68
 	android:exported
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:43:13-69
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:44:13-69
 manifest
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-80:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-80:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-80:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-80:12
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-81:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\arnav\.gradle\caches\transforms-3\3da494627677b7c8bb4bce3ad0a652df\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
@@ -95,33 +95,37 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:14:5-81
 	android:name
 		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:14:22-78
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:5-75
-	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:22-72
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:5-79
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:5-79
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:22-76
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:15:22-76
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:5-85
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:16:22-82
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:17:5-75
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:17:22-72
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:19:5-81
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:5-81
 MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:25:5-81
 MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:25:5-81
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:19:22-78
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:22-78
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:5-77
-MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:26:5-77
-MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:26:5-77
-	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:20:22-74
-uses-permission#android.permission.POST_NOTIFICATIONS
 ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:5-77
+MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:26:5-77
+MERGED from [androidx.work:work-runtime:2.9.0] C:\Users\arnav\.gradle\caches\transforms-3\011714040b58984dd981f32eac9c042b\transformed\work-runtime-2.9.0\AndroidManifest.xml:26:5-77
 	android:name
 		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:22-74
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:22:5-77
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:22:22-74
 application
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:23:5-78:19
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:23:5-78:19
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:24:5-79:19
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:24:5-79:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -155,77 +159,77 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\arnav\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\arnav\.gradle\caches\transforms-3\0dac3c737471167fe818b9497136c77e\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:28:9-35
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:29:9-35
 	android:label
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:26:9-39
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:27:9-39
 	android:roundIcon
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:27:9-54
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:28:9-54
 	android:icon
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:25:9-43
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:26:9-43
 	android:allowBackup
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:24:9-35
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:25:9-35
 	android:theme
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:29:9-52
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:30:9-52
 activity#com.silentguardian.MainActivity
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:32:9-39:20
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:33:9-40:20
 	android:exported
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:34:13-36
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:35:13-36
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:33:13-41
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:34:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:35:13-38:29
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:36:13-39:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:36:17-69
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:17-69
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:36:25-66
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:17-77
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:38:17-77
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:38:27-74
 receiver#com.silentguardian.BootReceiver
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:49:9-55:20
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:50:9-56:20
 	android:exported
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:51:13-36
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:50:13-41
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:51:13-41
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:52:13-54:29
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:53:13-55:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:53:17-79
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:54:17-79
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:53:25-76
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:54:25-76
 service#com.silentguardian.WhatsappNotificationListener
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:58:9-66:19
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:59:9-67:19
 	android:label
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:60:13-65
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:61:13-65
 	android:exported
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:62:13-36
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:63:13-36
 	android:permission
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:61:13-87
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:62:13-87
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:59:13-57
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:60:13-57
 intent-filter#action:name:android.service.notification.NotificationListenerService
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:63:13-65:29
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:64:13-66:29
 action#android.service.notification.NotificationListenerService
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:64:17-99
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:65:17-99
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:64:25-96
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:65:25-96
 provider#androidx.core.content.FileProvider
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:68:9-76:20
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:69:9-77:20
 	android:grantUriPermissions
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:72:13-47
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:73:13-47
 	android:authorities
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:70:13-66
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:71:13-66
 	android:exported
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:71:13-37
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:72:13-37
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:69:13-62
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:70:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:73:13-75:54
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:74:13-76:54
 	android:resource
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:75:17-51
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:76:17-51
 	android:name
-		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:74:17-67
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:75:17-67
 uses-sdk
 INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml

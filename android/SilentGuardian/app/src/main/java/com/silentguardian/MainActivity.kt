@@ -101,11 +101,25 @@ class MainActivity : AppCompatActivity() {
         return mode == AppOpsManager.MODE_ALLOWED
     }
 
-    private fun hasRuntimePermissions(): Boolean {
+    private fun hasForegroundPermissions(): Boolean {
         val callLog = androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_CALL_LOG)
-        val location = androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+        val fineLocation = androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+        val phoneState = androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_PHONE_STATE)
         return callLog == android.content.pm.PackageManager.PERMISSION_GRANTED &&
-               location == android.content.pm.PackageManager.PERMISSION_GRANTED
+               fineLocation == android.content.pm.PackageManager.PERMISSION_GRANTED &&
+               phoneState == android.content.pm.PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun hasBackgroundPermission(): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_BACKGROUND_LOCATION) == android.content.pm.PackageManager.PERMISSION_GRANTED
+        } else {
+            true
+        }
+    }
+
+    private fun hasRuntimePermissions(): Boolean {
+        return hasForegroundPermissions() && hasBackgroundPermission()
     }
 
     private fun isNotificationServiceEnabled(): Boolean {
@@ -135,25 +149,26 @@ class MainActivity : AppCompatActivity() {
             permissionBanner.setBackgroundColor(0xFF7F0000.toInt()) // dark red
             val sb = StringBuilder()
             if (!usageOk) sb.append("⚠️  Usage access NOT granted\n")
-            if (!runtimeOk) sb.append("⚠️  Call Log/Location NOT granted\n")
+            if (!runtimeOk) {
+                sb.append("⚠️  Location/Phone/Call permissions NOT granted\n")
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    sb.append("💡 For Location, you MUST select 'Allow all the time' in Settings\n")
+                }
+            }
             if (!notifyOk) sb.append("⚠️  Notification access NOT granted\n")
             sb.append("Tap below to fix")
             permissionText.text = sb.toString()
             permissionText.setTextColor(0xFFFFCDD2.toInt())
             grantPermissionBtn.visibility = View.VISIBLE
             
-            grantPermissionBtn.text = when {
-                !usageOk -> "Fix Usage Access"
-                !runtimeOk -> "Grant Runtime Permissions"
-                else -> "Enable Notification Access"
+            val (btnText, btnAction) = when {
+                !usageOk -> "Fix Usage Access" to ::openUsageAccessSettings
+                !runtimeOk -> "Grant Runtime Permissions" to ::requestRuntimePermissions
+                else -> "Enable Notification Access" to ::openNotificationAccessSettings
             }
-            grantPermissionBtn.setOnClickListener {
-                when {
-                    !usageOk -> openUsageAccessSettings()
-                    !runtimeOk -> requestRuntimePermissions()
-                    else -> openNotificationAccessSettings()
-                }
-            }
+            
+            grantPermissionBtn.text = btnText
+            grantPermissionBtn.setOnClickListener { btnAction() }
         }
     }
 
@@ -162,14 +177,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun requestRuntimePermissions() {
-        androidx.core.app.ActivityCompat.requestPermissions(
-            this,
-            arrayOf(
-                android.Manifest.permission.READ_CALL_LOG,
-                android.Manifest.permission.ACCESS_COARSE_LOCATION
-            ),
-            PERMISSION_REQUEST_CODE
-        )
+        if (!hasForegroundPermissions()) {
+            // Step 1: Request foreground permissions first.
+            // On Android 11+, you CANNOT request background location and foreground location at the same time.
+            androidx.core.app.ActivityCompat.requestPermissions(
+                this,
+                arrayOf(
+                    android.Manifest.permission.READ_CALL_LOG,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION,
+                    android.Manifest.permission.ACCESS_COARSE_LOCATION,
+                    android.Manifest.permission.READ_PHONE_STATE
+                ),
+                PERMISSION_REQUEST_CODE
+            )
+        } else if (!hasBackgroundPermission()) {
+            // Step 2: Once foreground is granted, request background location separately.
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                androidx.core.app.ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(android.Manifest.permission.ACCESS_BACKGROUND_LOCATION),
+                    PERMISSION_REQUEST_CODE
+                )
+            }
+        }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
