@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var eventListLayout: LinearLayout
     private lateinit var refreshBtn: Button
     private lateinit var runNowBtn: Button
+    private lateinit var exportDbBtn: Button
     private lateinit var emptyText: TextView
 
     // Permission request codes
@@ -420,6 +421,17 @@ class MainActivity : AppCompatActivity() {
         buttonRow.addView(runNowBtn)
         root.addView(buttonRow)
 
+        // ── Export Database ────────────────────────────────────────────────
+        exportDbBtn = Button(this).apply {
+            text = "📤  Export DB"
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            ).apply { setMargins(0, 0, 0, dp(20)) }
+            setOnClickListener { exportDatabase() }
+        }
+        root.addView(exportDbBtn)
+
         // ── Events list ────────────────────────────────────────────────────
         val eventsLabel = TextView(this).apply {
             text = "LAST 20 BEHAVIORAL SIGNALS"
@@ -448,6 +460,48 @@ class MainActivity : AppCompatActivity() {
         root.addView(eventListLayout)
 
         return scroll
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Database Export
+    // ─────────────────────────────────────────────────────────────────────────
+
+    private fun exportDatabase() {
+        try {
+            val dbFile = getDatabasePath(DatabaseHelper.DATABASE_NAME)
+            if (!dbFile.exists()) {
+                Toast.makeText(this, "Database file not found", Toast.LENGTH_SHORT).show()
+                return
+            }
+
+            val cacheDir = externalCacheDir ?: cacheDir
+            val exportFile = java.io.File(cacheDir, "silentguardian_export.db")
+            
+            // Copy file
+            dbFile.inputStream().use { input ->
+                exportFile.outputStream().use { output ->
+                    input.copyTo(output)
+                }
+            }
+
+            // Share file
+            val uri = androidx.core.content.FileProvider.getUriForFile(
+                this,
+                "com.silentguardian.fileprovider",
+                exportFile
+            )
+
+            val intent = Intent(Intent.ACTION_SEND).apply {
+                type = "application/octet-stream"
+                putExtra(Intent.EXTRA_STREAM, uri)
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+            startActivity(Intent.createChooser(intent, "Export Database"))
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "Export failed: ${e.message}", Toast.LENGTH_LONG).show()
+        }
     }
 
     // Helper: convert dp to pixels

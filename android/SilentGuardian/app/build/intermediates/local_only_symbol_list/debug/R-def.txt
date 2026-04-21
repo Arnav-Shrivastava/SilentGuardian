@@ -12,3 +12,4 @@ drawable ic_launcher_foreground
 mipmap ic_launcher
 mipmap ic_launcher_round
 style Theme.SilentGuardian
+xml file_paths
