@@ -11,10 +11,10 @@ INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\Si
 	android:name
 		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:43:13-69
 manifest
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-70:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-70:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-70:12
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-70:12
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-80:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-80:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-80:12
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:2:1-80:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\arnav\.gradle\caches\transforms-3\3da494627677b7c8bb4bce3ad0a652df\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
@@ -120,8 +120,8 @@ ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\Silen
 	android:name
 		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:21:22-74
 application
-ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:23:5-68:19
-INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:23:5-68:19
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:23:5-78:19
+INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:23:5-78:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arnav\.gradle\caches\transforms-3\4bd5e85451454609fba1ed62989d0777\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\arnav\.gradle\caches\transforms-3\e0e39ef122834dc438de870842d7d019\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -210,6 +210,22 @@ action#android.service.notification.NotificationListenerService
 ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:64:17-99
 	android:name
 		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:64:25-96
+provider#androidx.core.content.FileProvider
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:68:9-76:20
+	android:grantUriPermissions
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:72:13-47
+	android:authorities
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:70:13-66
+	android:exported
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:71:13-37
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:69:13-62
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:73:13-75:54
+	android:resource
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:75:17-51
+	android:name
+		ADDED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml:74:17-67
 uses-sdk
 INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\arnav\Desktop\Personal Projects\SilentGuardian\android\SilentGuardian\app\src\main\AndroidManifest.xml
