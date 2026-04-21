@@ -353,6 +353,16 @@ class MainActivity : AppCompatActivity() {
         }
         scroll.addView(root)
 
+        // App Logo
+        val logoImage = ImageView(this).apply {
+            setImageResource(R.drawable.ic_launcher_foreground) // The name you gave your SVG
+            layoutParams = LinearLayout.LayoutParams(dp(64), dp(64)).apply {
+                gravity = android.view.Gravity.CENTER_HORIZONTAL
+                setMargins(0, 0, 0, dp(16))
+            }
+        }
+        root.addView(logoImage)
+
         // ── App title ──────────────────────────────────────────────────────
         val titleText = TextView(this).apply {
             text = "🛡️  SilentGuardian"
