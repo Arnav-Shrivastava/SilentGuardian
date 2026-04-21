@@ -241,7 +241,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun buildEventCard(event: EventRow): View {
         val emoji = when (event.eventType) {
-            DatabaseHelper.EVENT_SCREEN_UNLOCK -> if (event.value == "unlock") "🔓" else "🔒"
+            DatabaseHelper.EVENT_SCREEN_UNLOCK -> if (event.primaryVal == "unlock") "🔓" else "🔒"
             DatabaseHelper.EVENT_CALL -> "📞"
             DatabaseHelper.EVENT_CHARGE -> "⚡"
             DatabaseHelper.EVENT_LOCATION -> "📍"
@@ -250,7 +250,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val title = when (event.eventType) {
-            DatabaseHelper.EVENT_SCREEN_UNLOCK -> if (event.value == "unlock") "Screen Unlocked" else "Screen Locked"
+            DatabaseHelper.EVENT_SCREEN_UNLOCK -> if (event.primaryVal == "unlock") "Screen Unlocked" else "Screen Locked"
             DatabaseHelper.EVENT_CALL -> "Call Event"
             DatabaseHelper.EVENT_CHARGE -> "Power State"
             DatabaseHelper.EVENT_LOCATION -> "Location Sync"
@@ -288,7 +288,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val detailText = TextView(this).apply {
-            text = event.value
+            text = if (event.secondaryVal.isNotEmpty()) "${event.primaryVal} (${event.secondaryVal})" else event.primaryVal
             textSize = 12f
             setTextColor(0xFFB0BEC5.toInt())
         }

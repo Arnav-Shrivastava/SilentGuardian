@@ -14,8 +14,11 @@
     <!-- Required for Call Log tracking -->
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
-    <!-- Required for Coarse Location -->
+    <!-- Required for Cell Tower Location tracking -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Required for CellInfo on newer Android -->
+
 
     <!-- Required to schedule WorkManager background jobs -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />

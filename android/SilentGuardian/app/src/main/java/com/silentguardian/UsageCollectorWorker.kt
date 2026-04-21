@@ -9,19 +9,13 @@ import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.os.BatteryManager
 import android.provider.CallLog
+import android.telephony.*
 import android.util.Log
 import androidx.core.content.ContextCompat
 import androidx.work.*
-import com.google.android.gms.location.LocationServices
-import com.google.android.gms.location.Priority
-import com.google.android.gms.tasks.Tasks
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-/**
- * UsageCollectorWorker — the heart of Layer 1 (Signal Collection).
- * Runs every 30 minutes to collect comprehensive behavioral signals.
- */
 class UsageCollectorWorker(
     private val context: Context,
     workerParams: WorkerParameters
@@ -30,18 +24,17 @@ class UsageCollectorWorker(
     companion object {
         const val TAG = "UsageCollectorWorker"
         const val WORK_NAME = "silentguardian_usage_collector"
+        private const val PREFS_NAME = "sg_prefs"
+        private const val KEY_HOME_TOWER = "home_tower_id"
 
         fun schedule(context: Context) {
             val constraints = Constraints.Builder()
                 .setRequiresBatteryNotLow(true)
                 .build()
 
-            val request = PeriodicWorkRequestBuilder<UsageCollectorWorker>(
-                30, TimeUnit.MINUTES
-            )
+            val request = PeriodicWorkRequestBuilder<UsageCollectorWorker>(30, TimeUnit.MINUTES)
                 .setConstraints(constraints)
                 .addTag(TAG)
-                .setBackoffCriteria(BackoffPolicy.EXPONENTIAL, 5, TimeUnit.MINUTES)
                 .build()
 
             WorkManager.getInstance(context).enqueueUniquePeriodicWork(
@@ -52,9 +45,7 @@ class UsageCollectorWorker(
         }
 
         fun runNow(context: Context) {
-            val request = OneTimeWorkRequestBuilder<UsageCollectorWorker>()
-                .addTag(TAG)
-                .build()
+            val request = OneTimeWorkRequestBuilder<UsageCollectorWorker>().build()
             WorkManager.getInstance(context).enqueue(request)
         }
     }
@@ -62,99 +53,129 @@ class UsageCollectorWorker(
     private val db by lazy { DatabaseHelper(context) }
 
     override fun doWork(): Result {
-        Log.d(TAG, "doWork() started at ${Date()}")
-
         collectScreenUnlockEvents()
         collectCallLogs()
         collectBatteryStatus()
-        collectCoarseLocation()
-        purgeOldDataIfNeeded()
-
+        collectCellLocation()
         return Result.success()
     }
 
     private fun collectScreenUnlockEvents() {
-        val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
-        val endTime = System.currentTimeMillis()
-        val startTime = endTime - TimeUnit.MINUTES.toMillis(31)
+        try {
+            val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
+            val endTime = System.currentTimeMillis()
+            val startTime = endTime - TimeUnit.MINUTES.toMillis(31)
 
-        val usageEvents = usm.queryEvents(startTime, endTime)
-        val event = UsageEvents.Event()
+            val usageEvents = usm.queryEvents(startTime, endTime)
+            val event = UsageEvents.Event()
 
-        while (usageEvents.hasNextEvent()) {
-            usageEvents.getNextEvent(event)
-            if (event.eventType == UsageEvents.Event.KEYGUARD_HIDDEN) {
-                db.insertEvent(DatabaseHelper.EVENT_SCREEN_UNLOCK, "unlock", Date(event.timeStamp))
-            } else if (event.eventType == UsageEvents.Event.KEYGUARD_SHOWN) {
-                db.insertEvent(DatabaseHelper.EVENT_SCREEN_UNLOCK, "lock", Date(event.timeStamp))
+            while (usageEvents.hasNextEvent()) {
+                usageEvents.getNextEvent(event)
+                if (event.eventType == UsageEvents.Event.KEYGUARD_HIDDEN) {
+                    db.insertEvent(DatabaseHelper.EVENT_SCREEN_UNLOCK, "unlock", null, Date(event.timeStamp))
+                } else if (event.eventType == UsageEvents.Event.KEYGUARD_SHOWN) {
+                    db.insertEvent(DatabaseHelper.EVENT_SCREEN_UNLOCK, "lock", null, Date(event.timeStamp))
+                }
             }
+        } catch (e: Exception) {
+            Log.e(TAG, "Screen unlock collection failed", e)
         }
     }
 
     private fun collectCallLogs() {
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) return
 
-        val cursor = context.contentResolver.query(
-            CallLog.Calls.CONTENT_URI,
-            null,
-            "${CallLog.Calls.DATE} > ?",
-            arrayOf((System.currentTimeMillis() - TimeUnit.MINUTES.toMillis(31)).toString()),
-            "${CallLog.Calls.DATE} DESC"
-        )
+        try {
+            val cursor = context.contentResolver.query(
+                CallLog.Calls.CONTENT_URI,
+                arrayOf(CallLog.Calls.TYPE, CallLog.Calls.DURATION, CallLog.Calls.DATE),
+                "${CallLog.Calls.DATE} > ?",
+                arrayOf((System.currentTimeMillis() - TimeUnit.MINUTES.toMillis(31)).toString()),
+                "${CallLog.Calls.DATE} DESC"
+            )
 
-        cursor?.use {
-            while (it.moveToNext()) {
-                val type = it.getInt(it.getColumnIndexOrThrow(CallLog.Calls.TYPE))
-                val duration = it.getString(it.getColumnIndexOrThrow(CallLog.Calls.DURATION))
-                val date = it.getLong(it.getColumnIndexOrThrow(CallLog.Calls.DATE))
-                val typeStr = when (type) {
-                    CallLog.Calls.INCOMING_TYPE -> "INCOMING"
-                    CallLog.Calls.OUTGOING_TYPE -> "OUTGOING"
-                    CallLog.Calls.MISSED_TYPE -> "MISSED"
-                    else -> "OTHER"
+            cursor?.use {
+                while (it.moveToNext()) {
+                    val type = it.getInt(it.getColumnIndexOrThrow(CallLog.Calls.TYPE))
+                    val duration = it.getString(it.getColumnIndexOrThrow(CallLog.Calls.DURATION))
+                    val date = it.getLong(it.getColumnIndexOrThrow(CallLog.Calls.DATE))
+                    
+                    val typeStr = when (type) {
+                        CallLog.Calls.INCOMING_TYPE -> "incoming"
+                        CallLog.Calls.OUTGOING_TYPE -> "outgoing"
+                        else -> null
+                    }
+                    
+                    if (typeStr != null) {
+                        db.insertEvent(DatabaseHelper.EVENT_CALL, typeStr, "duration_seconds:$duration", Date(date))
+                    }
                 }
-                db.insertEvent(DatabaseHelper.EVENT_CALL, "$typeStr, duration: $duration", Date(date))
             }
+        } catch (e: Exception) {
+            Log.e(TAG, "Call log collection failed", e)
         }
     }
 
     private fun collectBatteryStatus() {
-        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        val batteryStatus = context.registerReceiver(null, filter)
-        val status = batteryStatus?.getIntExtra(BatteryManager.EXTRA_STATUS, -1) ?: -1
-        val isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING || status == BatteryManager.BATTERY_STATUS_FULL
-        
-        val chargePlug = batteryStatus?.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) ?: -1
-        val usbCharge = chargePlug == BatteryManager.BATTERY_PLUGGED_USB
-        val acCharge = chargePlug == BatteryManager.BATTERY_PLUGGED_AC
-        
-        val value = if (isCharging) "CHARGING (${if (acCharge) "AC" else if (usbCharge) "USB" else "OTHER"})" else "DISCHARGING"
-        db.insertEvent(DatabaseHelper.EVENT_CHARGE, value)
-    }
-
-    private fun collectCoarseLocation() {
-        if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) return
-
-        val fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
         try {
-            val task = fusedLocationClient.getCurrentLocation(Priority.PRIORITY_BALANCED_POWER_ACCURACY, null)
-            val location = Tasks.await(task, 10, TimeUnit.SECONDS)
-            location?.let {
-                db.insertEvent(DatabaseHelper.EVENT_LOCATION, "lat: ${it.latitude}, lon: ${it.longitude}")
+            val batteryStatus = context.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+            batteryStatus?.let { intent ->
+                val level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
+                val scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
+                val pct = (level * 100 / scale.toFloat()).toInt()
+                
+                val status = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1)
+                val isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING || status == BatteryManager.BATTERY_STATUS_FULL
+                
+                db.insertEvent(DatabaseHelper.EVENT_CHARGE, pct.toString(), if (isCharging) "charging" else "discharging")
             }
         } catch (e: Exception) {
-            Log.e(TAG, "Location collection failed", e)
+            Log.e(TAG, "Battery collection failed", e)
         }
     }
 
-    private fun purgeOldDataIfNeeded() {
-        val prefs = context.getSharedPreferences("sg_prefs", Context.MODE_PRIVATE)
-        val lastPurgeDay = prefs.getString("last_purge_day", "")
-        val today = java.text.SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
+    private fun collectCellLocation() {
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
+            ContextCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) return
 
-        if (lastPurgeDay != today) {
-            db.purgeOldEvents(30)
-            prefs.edit().putString("last_purge_day", today).apply()
+        try {
+            val tm = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+            val allCellInfo = tm.allCellInfo
+            if (allCellInfo.isNullOrEmpty()) return
+
+            val cellInfo = allCellInfo[0]
+            val towerId = getTowerId(cellInfo) ?: return
+
+            val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            val homeTower = prefs.getString(KEY_HOME_TOWER, null)
+
+            if (homeTower == null) {
+                prefs.edit().putString(KEY_HOME_TOWER, towerId).apply()
+                db.insertEvent(DatabaseHelper.EVENT_LOCATION, "home", towerId)
+            } else {
+                val status = if (homeTower == towerId) "home" else "away"
+                db.insertEvent(DatabaseHelper.EVENT_LOCATION, status, towerId)
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Cell location collection failed", e)
+        }
+    }
+
+    private fun getTowerId(info: CellInfo): String? {
+        return when (info) {
+            is CellInfoGsm -> {
+                val id = info.cellIdentity
+                "${id.mccString}-${id.mncString}-${id.lac}-${id.cid}"
+            }
+            is CellInfoWcdma -> {
+                val id = info.cellIdentity
+                "${id.mccString}-${id.mncString}-${id.lac}-${id.cid}"
+            }
+            is CellInfoLte -> {
+                val id = info.cellIdentity
+                "${id.mccString}-${id.mncString}-${id.tac}-${id.ci}"
+            }
+            else -> null
         }
     }
 }
