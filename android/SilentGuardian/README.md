@@ -1,98 +1,100 @@
-# 🛡️ SilentGuardian — Week 2: Signal Expansion
+---
 
-## Project Overview: Layer 1 Evolution
-Week 2 focuses on extending the collection engine to gather **behavioral context**. By moving beyond simple screen-lock tracking, we are preparing the groundwork for Week 3’s Anomaly Detection. We now answer three critical questions:
-* **Where are you?** (Location context)
-* **Who are you talking to?** (Social/Call activity)
-* **Is your device healthy?** (Battery/Power state)
+## 🧠 Week 3: Feature Extraction — SQLite → Daily Feature Vectors
+
+### What Changed
+Week 3 moves from raw signal collection to **behavioral summarization**. The Python 
+feature extractor reads the SQLite database and converts raw events into one row per 
+day — ready for the HMM routine modeller.
 
 ---
 
 ## 📂 Updated Project Structure
 ```text
-app/src/main/
-├── AndroidManifest.xml        # Added: Location, Call Log, and Notification permissions
-└── java/com/silentguardian/
-    ├── DatabaseHelper.kt      # Updated: Generic schema to handle multi-type signals
-    ├── UsageCollectorWorker.kt# Updated: Aggregates Location, Battery, and Calls
-    ├── NotificationMonitor.kt # NEW: Service to monitor messaging activity (WhatsApp)
-    ├── BootReceiver.kt        # Reschedules Worker and Notification Service on startup
-    └── MainActivity.kt        # Updated: Permission Dashboard + Multi-type event feed
+SilentGuardian/
+├── android/                        # Arnav — Android app (unchanged this week)
+└── ml/
+    ├── feature_extractor.py        # NEW: SQLite → daily feature vectors
+    ├── routine_modeller.py         # NEW (Kunal): HMM trained on synthetic data
+    ├── models/
+    │   ├── hmm_baseline.pkl        # NEW (Kunal): trained HMM model
+    │   └── threshold.json          # NEW (Kunal): anomaly score threshold
+    ├── notebooks/
+    │   ├── feature_visualization.ipynb    # NEW: visualize real phone data
+    │   └── hmm_states_visualization.ipynb # NEW (Kunal): HMM states + transitions
+    └── data/
+        ├── synthetic_dataset.csv   # Kunal's Week 2 synthetic data
+        └── real_features.csv       # OUTPUT of feature_extractor.py (gitignored)
 ```
 
 ---
 
-## ✨ What’s New in Week 2
+## ✨ What's New in Week 3
 
-### 1. Unified Event Feed
-The UI now aggregates diverse signals into a single chronological timeline.
-* 📞 **Call Event:** Logs call types (incoming/outgoing/missed). *Note: Numbers are hashed for privacy.*
-* ⚡ **Power State:** Logs battery percentage and charging status.
-* 📍 **Location Sync:** Periodic lat/long snapshots to establish "Safe Zones."
-* 💬 **WhatsApp Activity:** Increments a counter via Notification Access (reads metadata only).
-* 🔓 **Screen Activity:** Legacy tracking for unlock/lock events.
+### 1. Feature Extractor (`ml/feature_extractor.py`)
+Reads `silentguardian.db` and produces a clean DataFrame with one row per day.
 
-### 2. Multi-Stage Permission Manager
-To handle sensitive data access, a new **Permission Dashboard** handles:
-* **Location:** "Allow all the time" required for background breadcrumbs.
-* **Call Logs:** Used to detect unusual social patterns (e.g., late-night calls).
-* **Notification Access:** Required to bridge the gap for apps like WhatsApp that don't share usage stats easily.
+**5 features extracted per day:**
 
-### 3. Smart Triggering
-`UsageCollectorWorker` now runs every 15–30 minutes, but also forces an immediate save if:
-* The battery drops below **15%**.
-* A phone call ends.
+| Feature | How It's Computed |
+|---|---|
+| `first_unlock_hour` | Hour of first UNLOCK event where primary_val = 'unlock' |
+| `call_count` | Total CALL events that day |
+| `social_score` | (call_count × 2) + (whatsapp_count × 1) |
+| `location_changes` | Number of times LOCATION flips home → away or away → home |
+| `app_diversity` | Unique unlock sessions / total unlock events |
+
+**No personal data in any feature** — no names, no numbers, no message content, 
+no GPS coordinates. Purely behavioural counts and timestamps.
+
+### 2. Routine Modeller (`ml/routine_modeller.py`) — Kunal
+Trains a GaussianHMM with 3 hidden states on the synthetic dataset:
+- **State 0:** Active day — early unlock, multiple calls, location changes
+- **State 1:** Moderate day — average routine
+- **State 2:** Inactive day — late unlock, few calls, no location changes
+
+Anomaly threshold: `mean_train_score - 2 × std_train_score`  
+Days scoring below this are flagged as anomalies.
 
 ---
 
-## 📊 Database Schema
-The SQLite table has been redesigned to be **polymorphic**, allowing flexible storage for different signal types.
-
+## 📊 Feature Output Schema
 ```sql
-CREATE TABLE events (
-    id            INTEGER PRIMARY KEY AUTOINCREMENT,
-    timestamp     DATETIME DEFAULT CURRENT_TIMESTAMP,
-    event_type    TEXT NOT NULL,   -- "CALL", "BATTERY", "LOCATION", "WHATSAPP", "UNLOCK"
-    primary_val   TEXT,            -- e.g., "Incoming", "85%", "51.5074,-0.1278"
-    secondary_val TEXT,            -- e.g., "Duration: 5m", "Charging", "Accuracy: 10m"
-    day_of_week   TEXT NOT NULL    -- "MONDAY"
-);
+-- real_features.csv (gitignored — real user data)
+date, first_unlock_hour, call_count, app_diversity, 
+social_score, location_changes, day_of_week
 ```
 
 ---
 
-## 💻 Implementation Highlights (Kotlin)
+## 🔒 Privacy Note
+The raw `.db` file is **never committed to GitHub** (covered by `.gitignore`).  
+To export your database: tap **Export DB** in the app → share via WhatsApp → 
+save to `ml/data/silentguardian.db` locally.
 
-### Call Log Collection
-Added to `UsageCollectorWorker`:
-```kotlin
-val cursor = context.contentResolver.query(CallLog.Calls.CONTENT_URI, null, null, null, CallLog.Calls.DATE + " DESC")
-// Capture last call type and timestamp...
-db.insertEvent("CALL", callType, "Duration: $duration")
-```
-
-### Battery State Observer
-```kotlin
-val intent = context.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
-val level = intent?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
-val status = if(isPlugged) "Charging" else "Discharging"
-db.insertEvent("BATTERY", "$level%", status)
+```bash
+# Pull DB from phone (alternative method if on USB debug)
+adb -s <device_id> pull /sdcard/Download/silentguardian.db ./ml/data/silentguardian.db
 ```
 
 ---
 
 ## 🧪 How to Test
-1.  **Sync:** Pull the `arnav/week-2` branch and sync Gradle.
-2.  **Permissions Marathon:** Open the app and address the banners:
-    * **Notification Access:** Enable for SilentGuardian in System Settings.
-    * **Location:** Set to "Allow all the time."
-3.  **Generate Data:**
-    * Place a short call or send/receive a WhatsApp message.
-    * Plug or unplug your charger.
-4.  **Verify:** Tap **Refresh** in the app. You should see a mix of icons (📞, ⚡, 📍) in the feed.
+
+1. Export DB from the app after 3–5 days of data collection
+2. Save to `ml/data/silentguardian.db`
+3. Run the feature extractor:
+```bash
+cd ml
+python feature_extractor.py
+```
+4. Check output — `data/real_features.csv` should have one row per day with no NaN 
+   values except possibly `first_unlock_hour` on days with no unlocks
 
 ---
 
-## 🚀 Week 3: Build and Train Agent 1 — Routine Modeller
-* **Feature Extraction:** Build extractor in Python (raw SQLite log $\rightarrow$ daily feature vector).
-* **Validation:** Test on your own 5-day phone data and visualize the vectors.
+## 🚀 Week 4: Build Agent 2 — Deviation Detector
+- **Anomaly scorer:** Mahalanobis distance from baseline profile → score 0–1
+- **Checkpoints:** 8 AM unlock, 9 AM call, 12 PM activity, 6 PM location change
+- **False alarm filters:** Weekend, travel, DND context reducers
+- **Escalation timer:** Score must stay > 0.7 for 30 consecutive minutes
